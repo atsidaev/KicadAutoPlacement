@@ -2,6 +2,8 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using KicadAutoPlacement;
 using KicadAutoPlacement.GenAlgorithm;
+using KicadAutoPlacement.Solvers;
+
 namespace KicadAutoPlacement.Tests
 {
     [TestClass]
@@ -10,7 +12,7 @@ namespace KicadAutoPlacement.Tests
         [TestMethod]
         public void IntersectedTest1()
         {
-            var res = PrintedCircuitBoard.AreSegmentsIntersect(
+            var res = GeometricSolver.AreSegmentsIntersect(
                 new Point(0, 0),
                 new Point(5, 5),
                 new Point(0, 5),
@@ -21,7 +23,7 @@ namespace KicadAutoPlacement.Tests
         [TestMethod]
         public void NotIntersectedTest1()
         {
-            var res = PrintedCircuitBoard.AreSegmentsIntersect(
+            var res = GeometricSolver.AreSegmentsIntersect(
                 new Point(152.4, 133.35),
                 new Point(205.7, 114.30),
                 new Point(160, 140),
@@ -32,7 +34,7 @@ namespace KicadAutoPlacement.Tests
         [TestMethod]
         public void IntersectedTest2()
         {
-            var res = PrintedCircuitBoard.AreSegmentsIntersect(
+            var res = GeometricSolver.AreSegmentsIntersect(
                 new Point(10, 10),
                 new Point(100, 100),
                 new Point(50, 0),
