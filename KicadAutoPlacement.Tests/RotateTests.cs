@@ -2,6 +2,7 @@
 using KicadAutoPlacement.GenAlgorithm;
 using KicadAutoPlacement.Solvers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using KicadAutoPlacement.Solvers;
 
 namespace KicadAutoPlacement.Tests
 {
